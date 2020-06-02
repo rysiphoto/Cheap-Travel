@@ -2,6 +2,7 @@
 
 // import axios from "axios"
 
+const API = () => {
  const axios = require("axios");
 axios({
   "method": "GET",
@@ -24,3 +25,6 @@ axios({
     console.log(error)
   })
 
+}
+
+export default API
