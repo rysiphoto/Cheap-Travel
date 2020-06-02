@@ -17,12 +17,12 @@ export default class MenuExampleSecondary extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='Travel Journal'
+          name='Journal'
           active={activeItem === 'Travel Journal'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='Cheap Flights'
+          name='CheapFlights'
           active={activeItem === 'Cheap Flights'}
           onClick={this.handleItemClick}
         />
