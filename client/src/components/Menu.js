@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
-
+import NavBar from "./NavBar/";
 export default class MenuExampleSecondary extends Component {
   state = { activeItem: 'home' }
 
@@ -48,11 +48,8 @@ export default class MenuExampleSecondary extends Component {
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
           </Menu.Item>
-          <Menu.Item
-            name='logout'
-            active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
-          />
+          <NavBar />
+
         </Menu.Menu>
       </Menu>
     )
