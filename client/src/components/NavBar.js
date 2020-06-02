@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
   return (
     <div>
@@ -18,8 +18,10 @@ const NavBar = () => {
 
       {isAuthenticated && (
         <span>
-          <Link to="/">Home</Link>&nbsp;
-          <Link to="/profile">Profile</Link>
+           &nbsp;&nbsp;&nbsp;&nbsp;Welcome, {user.nickname}
+          <Link to="/">&nbsp;&nbsp;&nbsp;&nbsp;Home</Link>&nbsp;
+          <Link to="/profile">&nbsp;&nbsp;&nbsp;&nbsp;Profile</Link>
+          <Link to="/journal">&nbsp;&nbsp;&nbsp;&nbsp;Journal</Link>
         </span>
       )}
 
