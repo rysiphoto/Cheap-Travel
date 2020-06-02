@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import { useAuth0 } from "./react-auth0-spa";
 import MenuExampleSecondary from "./components/Menu"
 import Journal from "./components/Journal"
+import CheapSearch from "./components/CheapSearch";
 
 function App() {
   const { loading } = useAuth0();
@@ -24,9 +25,11 @@ function App() {
           <NavBar />
         </header>
         <Switch>
+        <CheapSearch path="/CheapFlights" component={CheapSearch} />
+        
         <Journal path="/Journal" component={Journal}/>
           <Route path="/" exact />
-          <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/Profile" component={Profile} />
         </Switch>
       </Router>
     </div>

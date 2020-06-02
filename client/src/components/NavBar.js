@@ -20,8 +20,10 @@ const NavBar = () => {
         <span>
            &nbsp;&nbsp;&nbsp;&nbsp;Welcome, {user.nickname}
           <Link to="/">&nbsp;&nbsp;&nbsp;&nbsp;Home</Link>&nbsp;
-          <Link to="/profile">&nbsp;&nbsp;&nbsp;&nbsp;Profile</Link>
-          <Link to="/journal">&nbsp;&nbsp;&nbsp;&nbsp;Journal</Link>
+          <Link to="/Profile">&nbsp;&nbsp;&nbsp;&nbsp;Profile</Link>
+          <Link to="/Journal">&nbsp;&nbsp;&nbsp;&nbsp;Journal</Link>
+          <Link to="/CheapFlights">&nbsp;&nbsp;&nbsp;&nbsp;Cheap Flights</Link>
+          
         </span>
       )}
 
