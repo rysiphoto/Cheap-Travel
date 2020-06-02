@@ -2,11 +2,23 @@ import React from "react"
 import { Button, Form } from 'semantic-ui-react'
 // import FlightResults from "/FlightResults"
 
+import Api from "../utils/Api"
 
 const CheapSearch = () => {
-      
+      const[author, setAuthor] = useState("")
+      const[body, setBody] = useState("")
+      const[price, setPrice] = useState(Number)
+      const[depCity, setDepCity] = useState("")
+      const[arrCity, setArrCity] = useState("")
+      const[date, setDate] = useState(Number)
 
+      const handleInputChange = event => {
+            
+      }
 
+      const handleFormSubmit = event => {
+
+      }
       return (
       <div>
             <br></br>

@@ -1,4 +1,8 @@
-const axios = require("axios");
+
+
+// import axios from "axios"
+
+ const axios = require("axios");
 axios({
   "method": "GET",
   "url": "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2020-09-01",
@@ -19,3 +23,4 @@ axios({
   .catch((error) => {
     console.log(error)
   })
+
