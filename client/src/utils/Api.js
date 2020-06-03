@@ -23,5 +23,5 @@ const getFlight = (depCity, arrCity) => {
     })
 
 }
-export default API
 
+export default getFlight;
