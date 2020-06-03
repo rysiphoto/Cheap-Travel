@@ -1,7 +1,7 @@
 // src/App.js
 
 import React from "react";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/";
 import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
@@ -21,13 +21,11 @@ function App() {
       {/* Don't forget to include the history module */}
       <Router history={history}>
         <header>
-          <MenuExampleSecondary/>
-          <NavBar />
+          <MenuExampleSecondary />
         </header>
         <Switch>
-        <CheapSearch path="/CheapFlights" component={CheapSearch} />
-        
-        <Journal path="/Journal" component={Journal}/>
+          <CheapSearch path="/CheapSearch" component={CheapSearch} />
+          <Journal path="/Journal" component={Journal} />
           <Route path="/" exact />
           <PrivateRoute path="/Profile" component={Profile} />
         </Switch>

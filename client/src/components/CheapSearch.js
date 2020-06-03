@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import React from "react"
 import {useState, useEffect} from "react"
+=======
+import React, {useState, useEffect} from "react"
+>>>>>>> master
 import { Button, Form } from 'semantic-ui-react'
 import API from "../utils/API.js"
 // import FlightResults from "/FlightResults"
 
+import API from "../utils/Api"
 
 const CheapSearch = () => {
+<<<<<<< HEAD
 
       const [depCity, setDepCity] = useState("");
       const [arrCity, setArrCity] = useState("");
@@ -19,7 +25,33 @@ const CheapSearch = () => {
             .catch(err => console.log(err));
       
       }
+=======
+      const[author, setAuthor] = useState("")
+      const[body, setBody] = useState("")
+      const[price, setPrice] = useState(Number)
+      const[depCity, setDepCity] = useState("")
+      const[arrCity, setArrCity] = useState("")
+      const[date, setDate] = useState(Number)
+      const[data, setData] = useState({ //min price?? 
+      })
 
+      useEffect(() =>{
+>>>>>>> master
+
+      }, [])
+
+      const handleInputChange = event => {
+            setDepCity(event.target.value)
+            setArrCity(event.target.value)
+            setDate(event.target.value)
+      }
+
+
+      const handleFormSubmit = event => {
+            event.preventDefault()
+            
+
+      }
       return (
       <>
       <div>
@@ -36,14 +68,14 @@ const CheapSearch = () => {
                   </h4>
             <Form>
               <Form.Group unstackable widths={1}>
-                <Form.Input name="depCity" width={5} label='Departing City' placeholder='City You Will Be Leaving From' />
+                <Form.Input name="depCity" width={5} label='Departing City' placeholder='City You Will Be Leaving From' onChange={handleInputChange} />
                 <Form.Input name="arrCity" width={5} label='Destination City' placeholder='City You Will Be Flying To' />
               </Form.Group>
               <Form.Group widths={2}>
                 <Form.Input name="date" width={5} type="date" label='Departure Date' />
               </Form.Group>
               
-              <Button type='submit'>Calculate Expected Cost</Button>
+              <Button type='submit' onClick={handleFormSubmit}>Calculate Expected Cost</Button>
             </Form>
 
 

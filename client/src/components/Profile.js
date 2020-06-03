@@ -12,11 +12,13 @@ const Profile = () => {
 
   return (
     <Fragment>
-      <img src={user.picture} alt="Profile" />
+      <p></p>
+      <img src={user.picture} alt="Profile" width="150px" height="150px" />
 
       <h2>{user.name}</h2>
       <p>{user.email}</p>
-      <code>{JSON.stringify(user, null, 2)}</code>
+      <p></p>
+      {/* <code>{JSON.stringify(user, null, 2)}</code> */}
     </Fragment>
   );
 };
