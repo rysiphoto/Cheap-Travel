@@ -1,5 +1,7 @@
+import React from "react"
 import {useState, useEffect} from "react"
 import { Button, Form } from 'semantic-ui-react'
+import API from "../utils/API.js"
 // import FlightResults from "/FlightResults"
 
 
@@ -8,17 +10,25 @@ const CheapSearch = () => {
       const [depCity, setDepCity] = useState("");
       const [arrCity, setArrCity] = useState("");
       const [price, setPrice] = useState("")
+      const [date, setDate] = useState("")
 
-
+      const handleFormSubmit = event => {
+            event.preventDefault();
+            API.getFlight(depCity, arrCity)
+            .then(res => setPrice(res.data.Quotes[0].minprice))
+            .catch(err => console.log(err));
+      
+      }
 
       return (
+      <>
       <div>
             <br></br>
             <br></br>
             <h3>Please Provide The Following Pieces of Information:</h3> 
             <h4>
                   <ol>
-                        <li>Departing City</li>
+                        <li>Departing Airport Code See Airport Reference Code Dropdown</li>
                         <li>Desired Destination</li>
                         <li>Departure Date</li>
 
@@ -38,6 +48,7 @@ const CheapSearch = () => {
 
 
       </div>
+</>
           )
 }
 // state = { 
