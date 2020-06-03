@@ -1,12 +1,18 @@
+<<<<<<< HEAD
+const axios = require("axios");
+
+const getFlight = (depCity, arrCity) => {
+=======
 
 
 // import axios from "axios"
 
 const API = () => {
  const axios = require("axios");
+>>>>>>> master
 axios({
   "method": "GET",
-  "url": "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2020-09-01",
+  "url": `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${depCity}/${arrCity}/2020-09-01`,
   "headers": {
     "content-type": "application/octet-stream",
     "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
@@ -27,4 +33,9 @@ axios({
 
 }
 
+<<<<<<< HEAD
+export default getFlight;
+
+=======
 export default API
+>>>>>>> master
