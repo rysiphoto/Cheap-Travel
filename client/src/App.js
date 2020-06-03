@@ -1,7 +1,4 @@
-// src/App.js
-
 import React from "react";
-import NavBar from "./components/NavBar/";
 import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
