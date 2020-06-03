@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from "./Card"
+import JournalForm from "./Form"
 
 export default class Journal extends Component {
   state = { 
@@ -13,6 +14,7 @@ export default class Journal extends Component {
    render() {
         return (
  <>
+ <JournalForm/>
 <Card/>
 <Card/>
 <Card/>
