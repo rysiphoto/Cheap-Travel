@@ -26,5 +26,4 @@ axios({
   })
 
 }
-
 export default API
