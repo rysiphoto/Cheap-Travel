@@ -1,10 +1,14 @@
-import React from "react"
+import {useState, useEffect} from "react"
 import { Button, Form } from 'semantic-ui-react'
 // import FlightResults from "/FlightResults"
 
 
 const CheapSearch = () => {
-      
+
+      const [depCity, setDepCity] = useState("");
+      const [arrCity, setArrCity] = useState("");
+      const [price, setPrice] = useState("")
+
 
 
       return (
