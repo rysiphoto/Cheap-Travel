@@ -35,7 +35,9 @@ const CheapSearch = () => {
             setDepCity(data.value)
             setArrCity(data.value)
             setDate(event.target.value)
-            console.log("Corresponding Airport Code Should Print Here:", data.value)
+            // console.log("Corresponding Airport Code Should Print Here:", data.value)
+            console.log("departure city", depCity)
+            console.log("arrival city",arrCity)
             
       }
 
