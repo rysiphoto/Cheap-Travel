@@ -1,9 +1,13 @@
 const axios = require("axios");
 
-const getFlight = (depCity, arrCity) => {
+
+export default {
+
+getFlight: (depCity, arrCity, date) => {
+  console.log(depCity, arrCity, date)
   axios({
     "method": "GET",
-    "url": `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${depCity}/${arrCity}/2020-09-01`,
+    "url": `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${depCity}/${arrCity}/${date}`,
     "headers": {
       "content-type": "application/octet-stream",
       "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
@@ -16,6 +20,7 @@ const getFlight = (depCity, arrCity) => {
     .then((response) => {
       // console.log(response.data.Quotes[0].MinPrice)
       console.log(response.data)
+      return JSON.parse(response.data)
       // console.log(response[1].properties)
     })
     .catch((error) => {
@@ -23,5 +28,5 @@ const getFlight = (depCity, arrCity) => {
     })
 
 }
+}
 
-export default getFlight;
