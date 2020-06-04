@@ -27,8 +27,8 @@ function App() {
         <Switch>
           <CheapSearch path="/CheapSearch" component={CheapSearch} />
           <Journal path="/Journal" component={Journal} />
-          <Route path="/" component={Home} />
-          <PrivateRoute path="/Profile" component={Profile} />
+          <Route exact path="/" component={Home} />
+          <PrivateRoute exact path="/Profile" component={Profile} />
         </Switch>
       </Router>
       <Footer />
