@@ -26,6 +26,9 @@ const Card = ({post}) => {
               </Item.Description>
               <Item.Description>
                 Flying to <b>{arrCity}</b>
+              <Item.Description>
+             Flight Cost: <b> ${price} USD </b>
+              </Item.Description>
               </Item.Description><br/>
               <Item.Description>
             {body}
