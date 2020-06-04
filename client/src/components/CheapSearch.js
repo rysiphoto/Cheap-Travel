@@ -99,6 +99,9 @@ const CheapSearch = () => {
 
 
 
+          console.log("departure city", depCity)
+          console.log("arrivial city", arrCity)
+         
 
       // }
       return (
@@ -138,7 +141,6 @@ const CheapSearch = () => {
             </>
       )
 }
-
 
 
 // state = { 

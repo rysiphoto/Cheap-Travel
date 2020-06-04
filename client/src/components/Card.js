@@ -1,4 +1,4 @@
-import React, {Fragment} from "react"
+import React, {useState, useImperativeHandle} from "react"
 import { 
     Container,
     Image,
@@ -8,27 +8,37 @@ import { Link } from "react-router-dom"
 import { ListItem, List } from "./List";
 
 
-const Card = () => {
-  
+const Card = ({post}) => {
+
+  const {author, date, body, depCity, arrCity, price} = post;
+
     return (
      
         <Container>
         <Item.Group divided>
           <Item>
-            <Item.Image src='/images/wireframe/image.png' />
+            {/* <Item.Image src='/images/wireframe/image.png' /> */}
             <List>
-              <Item.Header as='a'>Travel Experience</Item.Header>
-              <ListItem>
-                <span>Date</span>
-                <span>Category</span>
-              </ListItem>
+              <Item.Header name="author" as='a' >{author}'s Travel Experience</Item.Header>
+
               <Item.Description>
-                A description which may flow for several lines and give context to the content.
+               Flying from <b> {depCity} </b>
               </Item.Description>
+              <Item.Description>
+                Flying to <b>{arrCity}</b>
+              <Item.Description>
+             Flight Cost: <b> ${price} USD </b>
+              </Item.Description>
+              </Item.Description><br/>
+              <Item.Description>
+            {body}
+              </Item.Description>
+{/*               
+         
               <Item.Extra>
                 <Image avatar circular src='/images/wireframe/square-image.png' />
-                Username
-              </Item.Extra>
+               
+              </Item.Extra> */}
             </List>
           </Item>
           </Item.Group>
