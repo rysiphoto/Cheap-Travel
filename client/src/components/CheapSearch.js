@@ -32,8 +32,8 @@ const CheapSearch = () => {
 
 
       const handleInputChange = (event, data) => {
-            setDepCity(event.target.value)
-            setArrCity(event.target.value)
+            setDepCity(data.value)
+            setArrCity(data.value)
             setDate(event.target.value)
             console.log("Corresponding Airport Code Should Print Here:", data.value)
             
@@ -86,13 +86,13 @@ const CheapSearch = () => {
 
                               </ol>
                         </h4>
-                        <Select placeholder='Select your country' options={cityOptions} />
+                        
                         <Form>
                               <Form.Group unstackable widths={1}>
                                     <Form.Select className="depCity" options={cityOptions}  name="depCity" width={5} label='Departing City' placeholder='City You Will Be Leaving From' onChange={handleInputChange} />
 
 
-                                    <Form.Select options={cityOptions} name="arrCity" width={5} label='Destination City' placeholder='City You Will Be Flying To' />
+                                    <Form.Select options={cityOptions} name="arrCity" width={5} label='Destination City' placeholder='City You Will Be Flying To' onChange={handleInputChange} />
                               </Form.Group>
                               <Form.Group widths={2}>
                                     <Form.Input name="date" width={5} type="date" label='Departure Date' />
