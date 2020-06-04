@@ -19,11 +19,13 @@ const CheapSearch = () => {
       const [depCity, setDepCity] = useState("");
       const [arrCity, setArrCity] = useState("");
       const [price, setPrice] = useState("")
-      const [date, setDate] = useState("")
+      const [date, setDate] = useState()
 
+
+      
       const handleFormSubmit = event => {
             event.preventDefault();
-            API.getFlight(depCity, arrCity)
+            API.getFlight(depCity, arrCity, date)
                   .then(res => setPrice(res.data.Quotes[0].minprice))
                   .catch(err => console.log(err));
 
@@ -31,13 +33,24 @@ const CheapSearch = () => {
 
 
 
+
       const handleInputChange = (event, data) => {
             setDepCity(data.value)
-            setArrCity(data.value)
+            // setArrCity(data.value)
             setDate(event.target.value)
             // console.log("Corresponding Airport Code Should Print Here:", data.value)
-            console.log("departure city", depCity)
-            console.log("arrival city",arrCity)
+            // console.log("departure city", depCity)
+            // console.log("arrival city",arrCity)
+            
+      }
+
+      const handleInputChange2 = (event, data) => {
+            // setDepCity(data.value)
+            setArrCity(data.value)
+            // setDate(event.target.value)
+            // console.log("Corresponding Airport Code Should Print Here:", data.value)
+            // console.log("departure city", depCity)
+            // console.log("arrival city",arrCity)
             
       }
 
@@ -72,6 +85,9 @@ const CheapSearch = () => {
            
           ]
 
+          console.log("departure city", depCity)
+          console.log("arrivial city", arrCity)
+         
 
       // }
       return (
@@ -94,10 +110,10 @@ const CheapSearch = () => {
                                     <Form.Select className="depCity" options={cityOptions}  name="depCity" width={5} label='Departing City' placeholder='City You Will Be Leaving From' onChange={handleInputChange} />
 
 
-                                    <Form.Select options={cityOptions} name="arrCity" width={5} label='Destination City' placeholder='City You Will Be Flying To' onChange={handleInputChange} />
+                                    <Form.Select options={cityOptions} name="arrCity" width={5} label='Destination City' placeholder='City You Will Be Flying To' onChange={handleInputChange2} />
                               </Form.Group>
                               <Form.Group widths={2}>
-                                    <Form.Input name="date" width={5} type="date" label='Departure Date' />
+                                    <Form.Input name="date" width={5} type="date" label='Departure Date' onClick={handleInputChange} />
                               </Form.Group>
 
                               <Button type='submit' onClick={handleFormSubmit}>Calculate Expected Cost</Button>
@@ -108,7 +124,6 @@ const CheapSearch = () => {
             </>
       )
 }
-
 
 
 // state = { 

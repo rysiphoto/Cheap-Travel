@@ -1,4 +1,4 @@
-import React, {Fragment} from "react"
+import React, {useState, useImperativeHandle} from "react"
 import { 
     Container,
     Image,
@@ -6,10 +6,26 @@ import {
    } from "semantic-ui-react"
 import { Link } from "react-router-dom"
 import { ListItem, List } from "./List";
-
+import JournalForm from "./Form"
 
 const Card = () => {
   
+  const[userData, setUserData] = useState({
+      name: "",
+      date: Date.now(),
+      body: "",
+      depCity:"",
+      arrCity:"",
+      price:Number,
+  })
+  const {name, date, body, depCity, arrCity, price} = userData;
+
+const handleSubmit = e => {
+  e.preventDefault()
+}
+
+
+
     return (
      
         <Container>
@@ -17,17 +33,17 @@ const Card = () => {
           <Item>
             <Item.Image src='/images/wireframe/image.png' />
             <List>
-              <Item.Header as='a'>Travel Experience</Item.Header>
+              <Item.Header name="name" as='a'>'s Travel Experience</Item.Header>
               <ListItem>
-                <span>Date</span>
-                <span>Category</span>
+                <span></span>
+                <span></span>
               </ListItem>
               <Item.Description>
-                A description which may flow for several lines and give context to the content.
+                
               </Item.Description>
               <Item.Extra>
                 <Image avatar circular src='/images/wireframe/square-image.png' />
-                Username
+               
               </Item.Extra>
             </List>
           </Item>
