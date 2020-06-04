@@ -1,6 +1,10 @@
 const axios = require("axios");
 
-const getFlight = (depCity, arrCity, date) => {
+
+export default {
+
+getFlight: (depCity, arrCity, date) => {
+  console.log(depCity, arrCity, date)
   axios({
     "method": "GET",
     "url": `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${depCity}/${arrCity}/${date}`,
@@ -16,6 +20,7 @@ const getFlight = (depCity, arrCity, date) => {
     .then((response) => {
       // console.log(response.data.Quotes[0].MinPrice)
       console.log(response.data)
+      return JSON.parse(response.data)
       // console.log(response[1].properties)
     })
     .catch((error) => {
@@ -23,5 +28,5 @@ const getFlight = (depCity, arrCity, date) => {
     })
 
 }
+}
 
-export default getFlight;
