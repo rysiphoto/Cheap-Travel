@@ -2,7 +2,6 @@ import './style.css';
 import React from 'react';
 import { Segment, Image } from 'semantic-ui-react'
 import island from "../../images/island.jpg";
-import StPaul from "../../images/StPaul.jpg";
 import Chicago from "../../images/Chicago.jpg";
 
 const Home = () => {
