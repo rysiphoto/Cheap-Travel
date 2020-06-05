@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import { Button, Form, Select} from 'semantic-ui-react'
+import { Button, Form, Select } from 'semantic-ui-react'
 
 import API from "../utils/Api"
 
 // import FlightResults from "/FlightResults"
-     
+
 
 const CheapSearch = () => {
 
@@ -12,20 +12,20 @@ const CheapSearch = () => {
       const [arrCity, setArrCity] = useState("");
       const [price, setPrice] = useState("")
       const [date, setDate] = useState("")
-      
+
 
       // const state = { 
-                 
+
       //             price: Number,
       //             depCity: "",
       //             arrCity: "",
       //             date: ""
       //         }
-      
 
-      
 
-      
+
+
+
 
       const handleFormSubmit = (event) => {
             event.preventDefault();
@@ -37,28 +37,28 @@ const CheapSearch = () => {
 
 
       const handleInputChange = (event, data) => {
-            
+
             setDepCity(data.value)
-      
-            
+
+
       }
 
       const handleInputChange2 = (event, data) => {
-         
-            
+
+
             setArrCity(data.value)
-      
-            
-            
+
+
+
       }
 
       const handleInputChange3 = (event, data) => {
-            
+
             setDate(data.value)
-       
-      
+
+
       }
-      
+
 
 
 
@@ -90,22 +90,22 @@ const CheapSearch = () => {
             { key: '25', text: 'Tampa, Florida', value: 'TPA-sky' },
             { key: '26', text: 'Portland, OR', value: 'PDX-sky' },
             { key: '27', text: 'Honolulu, HI', value: 'HNL-sky' },
-           
-          ]
-          console.log("departure city", depCity)
-          console.log("arrival city",arrCity)
-          console.log("Date selected:", date)
-         
+
+      ]
+      console.log("departure city", depCity)
+      console.log("arrival city", arrCity)
+      console.log("Date selected:", date)
 
 
 
-          console.log("departure city", depCity)
-          console.log("arrivial city", arrCity)
-         
+
+      console.log("departure city", depCity)
+      console.log("arrivial city", arrCity)
+
 
       // }
       return (
-            <>
+            <div className="containerHome">
                   <div>
                         <br></br>
                         <br></br>
@@ -118,10 +118,10 @@ const CheapSearch = () => {
 
                               </ol>
                         </h4>
-                        
+
                         <Form>
                               <Form.Group unstackable widths={1}>
-                                    <Form.Select className="depCity" options={cityOptions}  name="depCity" width={5} label='Departing City' placeholder='City You Will Be Leaving From' onChange={handleInputChange} />
+                                    <Form.Select className="depCity" options={cityOptions} name="depCity" width={5} label='Departing City' placeholder='City You Will Be Leaving From' onChange={handleInputChange} />
 
 
                                     <Form.Select options={cityOptions} name="arrCity" width={5} label='Destination City' placeholder='City You Will Be Flying To' onChange={handleInputChange2} />
@@ -135,10 +135,10 @@ const CheapSearch = () => {
 
 
                   </div>
-                  <div>
+                  {/* <div>
                         <p> PRICE?: {price}</p>
-                  </div>
-            </>
+                  </div> */}
+            </div>
       )
 }
 
