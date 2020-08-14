@@ -9,7 +9,7 @@
 # **Cheap Travel**
 
 ### **Project Description:**
-##### A React built site that allows you to log in using Auto0 and leave reviews of inexpensive trips you have taken to inspire others. A travel API has been implemented to search for cheap travel as well.
+##### Finding a cheap getaway right now is paramont at a time like this. It's also incredibly helpful to find reviews and tips for vacation destinations, along with finding the best deals! That is why we created this site. A React built site that allows you to log in using Auto0 and leave reviews of inexpensive trips you have taken to inspire others. A travel API has been implemented to search for cheap travel as well.
 ---
 ### **GitHub Address:**
 [Cheap Travel](https://github.com/rysiphoto/cheap-travel)
@@ -20,6 +20,9 @@
 ---
 ### **Dependencies**
 ##### npm i
+---
+### **Technologies Used**
+##### JavaScript, MonogoDB, React, Auth0, Express, REST, MERN, Mongoose, Semantic UI, HTML, CSS
 ---
 ### **Test Run Commands**
 ##### npm start
