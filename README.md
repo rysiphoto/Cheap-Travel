@@ -36,7 +36,7 @@
 ##### 
 ---
 ### **Author Contact Information:**
-![MyFace](https://avatars3.githubusercontent.com/u/61304775?s=150&u=d99beab884a1c29674dba64712a08086272d692b&v=4)
+![MyFace](https://avatars1.githubusercontent.com/u/61304775?s=460&u=2d5090ea181225bb78e9cea18e6e7c1295138a52&v=4)
 * Ryan Siverson
 * rcsskier@mac.com
 * [GitHub](https://github.com/rysiphoto)
